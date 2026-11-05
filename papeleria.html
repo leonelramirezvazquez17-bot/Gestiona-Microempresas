@@ -2,203 +2,125 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial‑scale=1.0">
     <title>Papelería Planet</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body id="inicio">
-
-<header>
-    <div class="contenedor">
-        <h2> Papelería Planet</h2>
-
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#productos">Productos</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#galeria">Galería</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-<main class="contenedor">
-
-    <div class="hero">
-        <h1>Todo lo que necesitas en un solo lugar</h1>
-        <p>Útiles escolares, impresiones, copias, trabajos escolares y mucho más.</p>
-        <a href="#productos" class="boton">Ver productos →</a>
-    </div>
-
-  
-    <section>
-        <h2>Nuestras categorías</h2>
-
-        <div class="categorias">
-            <div class="tarjeta rosa">
-                
-                <h3>Cuadernos</h3>
-            </div>
-
-            <div class="tarjeta azul">
-                
-                <h3>Plumas y lápices</h3>
-            </div>
-
-            <div class="tarjeta amarillo">
-                
-                <h3>Mochilas</h3>
-            </div>
-
-            <div class="tarjeta verde">
-              
-                <h3>Artículos de oficina</h3>
-            </div>
-
-            <div class="tarjeta purpura">
-                <
-                <h3>Otros productos</h3>
-            </div>
+    <header>
+        <div class="contenedor">
+            <h2>Papelería Planet</h2>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#productos">Productos</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
         </div>
-    </section>
+    </header>
 
-  
-    <section id="servicios">
-        <h2>Nuestros servicios</h2>
-
-        <div class="servicios">
-            <div class="tarjeta azul">
-               
-                <h3>Impresiones</h3>
-                <p>Documentos a color y blanco y negro.</p>
-            </div>
-
-            <div class="tarjeta purpura">
-                
-                <h3>Trabajos escolares</h3>
-                <p>Apoyo con maquetas y trabajos.</p>
-            </div>
-
-            <div class="tarjeta verde">
-               
-                <h3>Trámites</h3>
-                <p>Impresión de documentos y formularios.</p>
-            </div>
-
-            <div class="tarjeta amarillo">
-                
-                <h3>Copias</h3>
-                <p>Fotocopias y encuadernados.</p>
-            </div>
+    <main class="contenedor">
+        <div class="hero">
+            <h1>Todo lo que necesitas en un solo lugar</h1>
+            <p>Útiles escolares, impresiones, copias, trabajos escolares y mucho más.</p>
+            <a href="#productos" class="boton">Ver productos</a>
         </div>
-    </section>
 
-  
-    <section id="productos">
-        <h2>Catálogo de productos</h2>
-
-        <input
-            type="search"
-            id="buscador"
-            placeholder="Buscar productos..."
-        >
-
-        <div class="productos" id="listaProductos"></div>
-
-        <h3 id="totalCarrito"> Carrito: 0 productos</h3>
-
-        <button class="boton" onclick="verCarrito()">
-            Ver carrito
-        </button>
-    </section>
-
-   
-    <section id="galeria">
-        <h2>Galería</h2>
-
-        <div class="galeria">
-            <div class="tarjeta azul">
-               
-                <p>Nuestro local</p>
+        <section id="productos">
+            <h2>Nuestras categorías</h2>
+            <div class="categorias">
+                <div class="tarjeta rosa">
+                    <h3>Cuadernos</h3>
+                </div>
+                <div class="tarjeta azul">
+                    <h3>Plumas y lápices</h3>
+                </div>
+                <div class="tarjeta amarillo">
+                    <h3>Mochilas</h3>
+                </div>
+                <div class="tarjeta">
+                    <h3>Artículos de oficina</h3>
+                </div>
+                <div class="tarjeta purpura">
+                    <h3>Otros productos</h3>
+                </div>
             </div>
+            <input type="search" id="buscador" placeholder="Buscar productos…">
+            <div class="listaProductos"></div>
+            <h3 id="totalCarrito">Carrito: 0 productos</h3>
+            <button class="boton" onclick="verCarrito()">Ver carrito</button>
+        </section>
 
-            <div class="tarjeta rosa">
-              
-                <p>Cuadernos</p>
+        <section id="servicios">
+            <h2>Nuestros servicios</h2>
+            <div class="servicios">
+                <div class="tarjeta azul">
+                    <h3>Impresiones</h3>
+                    <p>Documentos a color y blanco y negro.</p>
+                </div>
+                <div class="tarjeta purpura">
+                    <h3>Trabajos escolares</h3>
+                    <p>Apoyo con maquetas y trabajos.</p>
+                </div>
+                <div class="tarjeta">
+                    <h3>Trámites</h3>
+                    <p>Impresión de documentos y formularios.</p>
+                </div>
+                <div class="tarjeta amarillo">
+                    <h3>Copias</h3>
+                    <p>Fotocopias y encuadernados.</p>
+                </div>
             </div>
+        </section>
 
-            <div class="tarjeta amarillo">
-               >
-                <p>Mochilas</p>
+        <section id="galeria">
+            <h2>Galería</h2>
+            <div class="galeria">
+                <div class="tarjeta azul">
+                    <p>Nuestro local</p>
+                </div>
+                <div class="tarjeta rosa">
+                    <p>Cuadernos</p>
+                </div>
+                <div class="tarjeta amarillo">
+                    <p>Mochilas</p>
+                </div>
+                <div class="tarjeta">
+                    <p>Impresiones</p>
+                </div>
             </div>
+        </section>
 
-            <div class="tarjeta verde">
-                
-                <p>Impresiones</p>
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <div class="tarjeta">
+                <form id="formulario">
+                    <label for="nombre">Nombre:</label>
+                    <input id="nombre" type="text" required placeholder="Tu nombre">
+
+                    <label for="correo">Correo electrónico:</label>
+                    <input id="correo" type="email" required placeholder="tucorreo@ejemplo.com">
+
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" required placeholder="Escribe tu mensaje"></textarea>
+
+                    <button class="boton" type="submit">Enviar mensaje</button>
+                </form>
+                <p id="confirmacion"></p>
+                <p>Calle Fresno, Mz.23, Lt.10, Col. San José Las Palmas</p>
+                <p>papeleriaplanet@gmail.com</p>
+                <a class="boton" href="https://wa.me/5215512345678">WhatsApp</a>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-  
-    <section id="contacto">
-        <h2>Contacto</h2>
-
-        <div class="tarjeta">
-            <form id="formulario">
-
-                <label for="nombre">Nombre:</label>
-                <input
-                    id="nombre"
-                    required
-                    placeholder="Tu nombre"
-                >
-
-                <label for="correo">Correo electrónico:</label>
-                <input
-                    id="correo"
-                    type="email"
-                    required
-                    placeholder="tucorreo@ejemplo.com"
-                >
-
-                <label for="mensaje">Mensaje:</label>
-                <textarea
-                    id="mensaje"
-                    required
-                    placeholder="Escribe tu mensaje"
-                ></textarea>
-
-                <button class="boton" type="submit">
-                    Enviar mensaje
-                </button>
-
-            </form>
-
-            <p id="confirmacion"></p>
-
-            <p> Calle Fresno, Mz. 22, Lt. 153, Col. San José Las Palmas</p>
-
-            <p> papeleriaplanet@gmail.com</p>
-
-            <a class="boton" href="https://wa.me/525512345678">
-                WhatsApp
-            </a>
-        </div>
-    </section>
-
-</main>
-
-
-<footer>
-    <p> Papelería Planet  2026</p>
-    <p>Todos los derechos reservados.</p>
-</footer>
-
-<script src="script.js"></script>
-
+    <footer>
+        <p>Papelería Planet © 2026</p>
+        <p>Todos los derechos reservados.</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
