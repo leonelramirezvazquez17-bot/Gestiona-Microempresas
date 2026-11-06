@@ -2,138 +2,268 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial‑scale=1.0">
-    <title>Papelería Planet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papelería Planet | Todo en un solo lugar</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body id="inicio">
-    <header>
-        <div class="contenedor">
-            <h2>Papelería Planet</h2>
-            <nav>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#productos">Productos</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#galeria">Galería</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
+
+<body>
+
+<!-- ENCABEZADO -->
+<header class="encabezado" id="inicio">
+    <a href="#inicio" class="logo">
+        <img src="imagenes/logo.png" alt="Logo de Papelería Planet">
+        <span>Papelería <b>Planet</b></span>
+    </a>
+
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
+
+    <nav class="menu" id="menu">
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#galeria">Galería</a>
+        <a href="#ubicacion">Ubicación</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
+
+<!-- PORTADA -->
+<section class="portada">
+    <div class="portada-contenido">
+        <span class="etiqueta">BIENVENIDO A PAPELERÍA PLANET</span>
+        <h1>Todo lo que necesitas en un solo lugar</h1>
+        <p>
+            Encuentra artículos escolares, productos de oficina
+            y servicios para tus actividades diarias.
+        </p>
+        <a href="#productos" class="boton">Ver productos</a>
+    </div>
+    <div class="portada-imagen">
+        <img src="imagenes/portada.jpg" alt="Productos de Papelería Planet">
+    </div>
+</section>
+
+<!-- PRODUCTOS -->
+<section class="seccion" id="productos">
+    <div class="titulo-seccion">
+        <span>CONOCE NUESTRO CATÁLOGO</span>
+        <h2>Nuestros productos</h2>
+        <p>Encuentra diferentes artículos para la escuela y oficina.</p>
+    </div>
+
+    <div class="buscador">
+        <input type="search" id="busqueda" placeholder="Buscar un producto...">
+        <button type="button" id="buscarBtn">Buscar</button>
+    </div>
+
+    <div class="filtros">
+        <label for="categoriaFiltro">Categoría:</label>
+        <select id="categoriaFiltro">
+            <option value="todos">Todas</option>
+            <option value="cuadernos">Cuadernos</option>
+            <option value="plumas">Plumas y lápices</option>
+            <option value="mochilas">Mochilas</option>
+            <option value="oficina">Artículos de oficina</option>
+            <option value="otros">Otros productos</option>
+        </select>
+    </div>
+
+    <div class="productos-grid" id="productosGrid">
+
+        <article class="producto" data-categoria="cuadernos">
+            <img src="imagenes/cuadernos.jpg" alt="Cuadernos">
+            <div class="producto-info">
+                <h3>Cuadernos</h3>
+                <p>Cuadernos para diferentes materias y actividades.</p>
+                <span>Consultar precio</span>
+            </div>
+        </article>
+
+        <article class="producto" data-categoria="plumas">
+            <img src="imagenes/plumas.jpg" alt="Plumas y lápices">
+            <div class="producto-info">
+                <h3>Plumas y lápices</h3>
+                <p>Artículos básicos para escribir y dibujar.</p>
+                <span>Consultar precio</span>
+            </div>
+        </article>
+
+        <article class="producto" data-categoria="mochilas">
+            <img src="imagenes/mochilas.jpg" alt="Mochilas">
+            <div class="producto-info">
+                <h3>Mochilas</h3>
+                <p>Opciones para transportar tus útiles escolares.</p>
+                <span>Consultar precio</span>
+            </div>
+        </article>
+
+        <article class="producto" data-categoria="oficina">
+            <img src="imagenes/oficina.jpg" alt="Artículos de oficina">
+            <div class="producto-info">
+                <h3>Artículos de oficina</h3>
+                <p>Materiales para organizar tus actividades.</p>
+                <span>Consultar precio</span>
+            </div>
+        </article>
+
+        <article class="producto" data-categoria="otros">
+            <img src="imagenes/otros.jpg" alt="Otros productos">
+            <div class="producto-info">
+                <h3>Otros productos</h3>
+                <p>Más artículos disponibles en nuestra papelería.</p>
+                <span>Consultar precio</span>
+            </div>
+        </article>
+
+    </div>
+
+    <p id="sinResultados" class="mensaje-oculto">
+        No se encontraron productos.
+    </p>
+</section>
+
+<!-- SERVICIOS -->
+<section class="seccion servicios" id="servicios">
+    <div class="titulo-seccion">
+        <span>LO QUE OFRECEMOS</span>
+        <h2>Nuestros servicios</h2>
+        <p>También contamos con servicios para ayudarte en tus actividades.</p>
+    </div>
+
+    <div class="servicios-grid">
+
+        <article class="servicio">
+            <img src="imagenes/impresiones.jpg" alt="Servicio de impresiones">
+            <h3>Impresiones y copias</h3>
+            <p>Servicio de impresión y copiado de documentos.</p>
+        </article>
+
+        <article class="servicio">
+            <img src="imagenes/trabajos.jpg" alt="Trabajos escolares">
+            <h3>Trabajos escolares</h3>
+            <p>Apoyo con actividades y trabajos escolares.</p>
+        </article>
+
+        <article class="servicio">
+            <img src="imagenes/tramites.jpg" alt="Trámites">
+            <h3>Trámites</h3>
+            <p>Apoyo con diferentes trámites y documentos.</p>
+        </article>
+
+        <article class="servicio">
+            <div class="icono-servicio">📚</div>
+            <h3>Encuadernados</h3>
+            <p>Servicio de organización y encuadernado de documentos.</p>
+        </article>
+
+    </div>
+</section>
+
+<!-- GALERÍA -->
+<section class="seccion" id="galeria">
+    <div class="titulo-seccion">
+        <span>UN VISTAZO A NUESTRA PAPELERÍA</span>
+        <h2>Galería</h2>
+        <p>Conoce algunos de nuestros productos y servicios.</p>
+    </div>
+
+    <div class="galeria-grid">
+        <img src="imagenes/cuadernos.jpg" alt="Artículos escolares">
+        <img src="imagenes/mochilas.jpg" alt="Mochilas">
+        <img src="imagenes/impresiones.jpg" alt="Impresiones">
+        <img src="imagenes/oficina.jpg" alt="Material de oficina">
+    </div>
+</section>
+
+<!-- UBICACIÓN -->
+<section class="seccion ubicacion" id="ubicacion">
+    <div class="titulo-seccion">
+        <span>VISÍTANOS</span>
+        <h2>¿Dónde estamos?</h2>
+        <p>Te esperamos en Papelería Planet.</p>
+    </div>
+
+    <div class="ubicacion-contenido">
+        <div class="direccion">
+            <h3>Nuestra dirección</h3>
+            <p>
+                Calle Fresno, Manzana 22, Lote 153,
+                Colonia San José Las Palmas.
+            </p>
+            <a class="boton" target="_blank"
+               href="https://www.google.com/maps/search/?api=1&query=Colonia+San+Jose+Las+Palmas+Mexico">
+                Cómo llegar
+            </a>
         </div>
-    </header>
 
-    <main class="contenedor">
-        <div class="hero">
-            <h1>Todo lo que necesitas en un solo lugar</h1>
-            <p>Útiles escolares, impresiones, copias, trabajos escolares y mucho más.</p>
-            <a href="#productos" class="boton">Ver productos</a>
+        <div class="mapa">
+            <iframe
+                src="https://maps.google.com/maps?q=San%20Jose%20Las%20Palmas%20Mexico&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                loading="lazy"
+                allowfullscreen
+                title="Mapa de ubicación">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="seccion contacto" id="contacto">
+    <div class="titulo-seccion">
+        <span>ESTAMOS PARA AYUDARTE</span>
+        <h2>Contáctanos</h2>
+        <p>Envíanos tus dudas o solicita información.</p>
+    </div>
+
+    <div class="contacto-contenido">
+
+        <form id="formularioContacto">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" placeholder="Escribe tu nombre" required>
+
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" placeholder="ejemplo@correo.com" required>
+
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" rows="5"
+                placeholder="Escribe tu mensaje..." required></textarea>
+
+            <button type="submit" class="boton">Enviar mensaje</button>
+            <p id="respuestaFormulario" aria-live="polite"></p>
+        </form>
+
+        <div class="datos-contacto">
+            <h3>Información de contacto</h3>
+            <p><b>Negocio:</b> Papelería Planet</p>
+            <p><b>Dirección:</b> San José Las Palmas</p>
+            <p><b>WhatsApp:</b> Contáctanos directamente.</p>
+
+            <!-- CAMBIA EL NÚMERO POR EL WHATSAPP DEL NEGOCIO -->
+            <a class="boton whatsapp" target="_blank"
+               href="https://wa.me/52TUNUMERO">
+                Contactar por WhatsApp
+            </a>
         </div>
 
-        <section id="productos">
-            <h2>Nuestras categorías</h2>
-            <div class="categorias">
-                <div class="tarjeta rosa">
-                    <img src="cuadernos.jfif" alt="Cuadernos">
-                    <h3>Cuadernos</h3>
-                </div>
-                <div class="tarjeta azul">
-                    <img src="plumas y lápices.webp" alt="Plumas y lápices">
-                    <h3>Plumas y lápices</h3>
-                </div>
-                <div class="tarjeta amarillo">
-                    <img src="mochilas.webp" alt="Mochilas">
-                    <h3>Mochilas</h3>
-                </div>
-                <div class="tarjeta">
-                    <img src="OFICINA.webp" alt="Artículos de oficina">
-                    <h3>Artículos de oficina</h3>
-                </div>
-                <div class="tarjeta purpura">
-                    <img src="perfumería.webp" alt="Otros productos">
-                    <h3>Otros productos</h3>
-                </div>
-            </div>
-            <input type="search" id="buscador" placeholder="Buscar productos…">
-            <div class="listaProductos"></div>
-            <h3 id="totalCarrito">Carrito: 0 productos</h3>
-            <button class="boton" onclick="verCarrito()">Ver carrito</button>
-        </section>
+    </div>
+</section>
 
-        <section id="servicios">
-            <h2>Nuestros servicios</h2>
-            <div class="servicios">
-                <div class="tarjeta azul">
-                    <img src="OIP.webp" alt="Impresiones">
-                    <h3>Impresiones</h3>
-                    <p>Documentos a color y blanco y negro.</p>
-                </div>
-                <div class="tarjeta purpura">
-                    <img src="descargar trabajos.webp" alt="Trabajos escolares">
-                    <h3>Trabajos escolares</h3>
-                    <p>Apoyo con maquetas y trabajos.</p>
-                </div>
-                <div class="tarjeta">
-                    <img src="OIP (1).webp" alt="Trámites">
-                    <h3>Trámites</h3>
-                    <p>Impresión de documentos y formularios.</p>
-                </div>
-                <div class="tarjeta amarillo">
-                    <img src="OIP (2) COPIAS.webp" alt="Copias">
-                    <h3>Copias</h3>
-                    <p>Fotocopias y encuadernados.</p>
-                </div>
-            </div>
-        </section>
+<!-- PIE DE PÁGINA -->
+<footer class="pie">
+    <h2>Papelería Planet</h2>
+    <p>Todo lo que necesitas en un solo lugar.</p>
+    <div class="enlaces-pie">
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+    </div>
+    <p class="copyright">© 2026 Papelería Planet. Todos los derechos reservados.</p>
+</footer>
 
-        <section id="galeria">
-            <h2>Galería</h2>
-            <div class="galeria">
-                <div class="tarjeta azul">
-                    <img src="local.jpg" alt="Nuestro local">
-                    <p>Nuestro local</p>
-                </div>
-                <div class="tarjeta rosa">
-                    <img src="cuadernos.jfif" alt="Cuadernos">
-                    <p>Cuadernos</p>
-                </div>
-                <div class="tarjeta amarillo">
-                    <img src="PAPELERÍA.jpg" alt="Mochilas">
-                    <p>Mochilas</p>
-                </div>
-                <div class="tarjeta">
-                    <img src="papeleríass.jpg" alt="Impresiones">
-                    <p>Impresiones</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <div class="tarjeta">
-                <form id="formulario">
-                    <label for="nombre">Nombre:</label>
-                    <input id="nombre" type="text" required placeholder="Tu nombre">
-
-                    <label for="correo">Correo electrónico:</label>
-                    <input id="correo" type="email" required placeholder="tucorreo@ejemplo.com">
-
-                    <label for="mensaje">Mensaje:</label>
-                    <textarea id="mensaje" required placeholder="Escribe tu mensaje"></textarea>
-
-                    <button class="boton" type="submit">Enviar mensaje</button>
-                </form>
-                <p id="confirmacion"></p>
-                <p>Calle Fresno, Mz.23, Lt.10, Col. San José Las Palmas</p>
-                <p>papeleriaplanet@gmail.com</p>
-                <a class="boton" href="https://wa.me/5215512345678">WhatsApp</a>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <p>Papelería Planet © 2026</p>
-        <p>Todos los derechos reservados.</p>
-    </footer>
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
